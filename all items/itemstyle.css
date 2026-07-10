@@ -1,0 +1,409 @@
+/* ==========================================================================
+   CSS Variables for Global Theming (Aman Bazaar Style)
+   ========================================================================== */
+:root {
+    --clr-gold: #C5A059;
+    --clr-gold-hover: #DAB975;
+    --clr-dark-blue: #1A2238;
+    --clr-deep-brown: #3E2723;
+    --clr-bg-light: #F4EFE6;
+    --clr-white: #FFFFFF;
+    --clr-text-main: #333333;
+    --clr-text-muted: #666666;
+    
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Lora', serif;
+    
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--clr-bg-light);
+    color: var(--clr-text-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+/* ==========================================================================
+   Enhanced Navbar (Overlay Version)
+   ========================================================================== */
+.navbar {
+    background-color: transparent; /* Pure transparent */
+    color: var(--clr-white);
+    padding: 1.5rem 0;
+    position: absolute; /* Key change: sits on top of the hero */
+    top: 0;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition); /* Smooth transition for hover/scroll effects */
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Optional: Add a slight gradient shadow to the top so white text is always visible */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--clr-gold);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--clr-white);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--clr-gold);
+}
+
+/* ==========================================================================
+   Hero Section (Fixed Background)
+   ========================================================================== */
+/* ==========================================================================
+   Hero Section (Enhanced)
+   ========================================================================== */
+.category-hero {
+    background-image: url('../images/Ancient Egyptian Style Candle.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh; /* Keeps it tall and dramatic */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    /* Rich Bazaar colors: Lapis Blue to Deep Earth Brown */
+    background: linear-gradient(
+        135deg, 
+        rgba(26, 34, 56, 0.7) 0%, 
+        rgba(62, 39, 35, 0.6) 100%
+    );
+    position: absolute;
+    inset: 0; /* Modern shortcut for top/left/right/bottom: 0 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+    color: var(--clr-gold);
+    margin-bottom: 1.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+    color: var(--clr-white);
+    animation: fadeInDown 1s ease-out forwards;
+}
+/* 
+.category-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--clr-gold);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+} */
+
+.category-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* ==========================================================================
+   Products Grid Layout
+   ========================================================================== */
+.products-section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--clr-deep-brown);
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--clr-gold);
+    margin: 10px auto 0;
+}
+
+.products-grid {
+    display: grid;
+    /* Responsive Grid: Default to 1 column, scales to 4 on large screens */
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-grid {
+        /* Forces 4 items per row on desktop */
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ==========================================================================
+   Product Card Styles & Animations
+   ========================================================================== */
+.product-card {
+    background-color: var(--clr-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EAEAEA;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--clr-gold);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #eee; /* Fallback color for missing images */
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.08); /* Slight zoom on hover */
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--clr-dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 0.95rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    
+    /* Truncate text to exactly 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #EAEAEA;
+    padding-top: 1rem;
+    margin-top: auto;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--clr-deep-brown);
+}
+
+.cta-button {
+    background-color: var(--clr-gold);
+    color: var(--clr-dark-blue);
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-gold);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-white);
+    text-align: center;
+    padding: 2rem 0;
+    font-family: var(--font-heading);
+    border-top: 4px solid var(--clr-gold);
+}
+
+/* ==========================================================================
+   Keyframes
+   ========================================================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+/* ===== About Us Page ===== */
+
+.info-section {
+
+    padding: 140px 10%;
+
+    max-width: 900px;
+
+    margin: 120px auto;
+
+    text-align: center;
+
+    background: rgb(211, 157, 49);
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+
+    backdrop-filter: blur(6px);
+}
+
+/* Title */
+.section-title {
+
+    font-size: 45px;
+
+    margin-bottom: 35px;
+
+    color: #4b3b07;
+
+    font-family: 'Cinzel', serif;
+
+    letter-spacing: 2px;
+}
+
+/* Paragraphs */
+.info-section p {
+
+    font-size: 20px;
+
+    line-height: 1.9;
+
+    color: #f5e6c8;
+
+    margin-bottom: 20px;
+}
+
+/* Optional: hover effect for section (nice touch) */
+.info-section:hover {
+
+    transform: translateY(-3px);
+
+    transition: 0.3s ease;
+}
