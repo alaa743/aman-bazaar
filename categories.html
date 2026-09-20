@@ -1,111 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-base="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Collections | AMAN Bazaar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Collections | Aman Bazaar</title>
+  <meta name="description" content="Browse all 7 Aman Bazaar collections, from sacred candles and Bastet relics to statement tables, royal adornments and papyrus art.">
+  <meta name="theme-color" content="#0a1020">
+  <meta property="og:site_name" content="Aman Bazaar">
+  <meta property="og:title" content="All Collections | Aman Bazaar">
+  <meta property="og:description" content="Browse all 7 Aman Bazaar collections, from sacred candles and Bastet relics to statement tables, royal adornments and papyrus art.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/background.jpeg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a1020'/%3E%3Cg fill='none' stroke='%23c8a04f' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='16' cy='9.5' r='4.3'/%3E%3Cpath d='M16 14v12M10.5 18h11'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,400..700;1,400..700&family=Inter:wght@300..700&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Aman <span>Bazaar</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="categories.html" class="active">Collections</a></li>
-                   
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">&#x13080;</span>
+        Aman <span>Bazaar</span>
+      </a>
 
-    <section class="inner-hero">
-        <div class="hero-overlay">
-            <div class="hero-content ">
-                <h1>The Archives</h1>
-                <p>Discover our curated collections inspired by the timeless elegance of Ancient Egypt.</p>
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="categories.html" aria-current="page">Collections</a>
+        <a class="nav__link" href="story.html">Our Story</a>
+        <a class="nav__link" href="all%20items/about.html">About</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" type="button" data-search-open aria-label="Search the collection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+        <button class="icon-btn" type="button" data-cart-open aria-label="Open your collection">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" aria-hidden="true">0</span>
+        </button>
+        <button class="icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__media" style="background-image:url('images/background.jpeg')" data-parallax="0.1"></div>
+      <div class="page-hero__inner">
+        <p class="eyebrow" style="color:var(--gold-500)">The Archives</p>
+        <h1 class="page-hero__title">Every collection</h1>
+        <p class="page-hero__lede">
+          134 pieces, organised into 7 collections. Each one curated around a
+          single thread of the ancient world and finished by hand.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <nav aria-label="Breadcrumb" style="margin-bottom:2.5rem">
+          <ol class="crumbs">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Collections</li>
+          </ol>
+        </nav>
+
+        <div class="collection-grid" data-reveal-group>
+          <a class="collection-card" href="all%20items/Item1.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Ancient%20Egyptian%20Style%20Candle.jpeg" alt="Sacred Candles" loading="lazy" decoding="async">
+            <span class="collection-card__count">24 pieces</span>
+            <div class="collection-card__body">
+              <h2 class="collection-card__title">Sacred Candles</h2>
+              <p class="collection-card__desc">Antique candle holders are not just lighting tools, but true artistic pieces that carry the spirit of ancient civilizations within their design. Caref</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
             </div>
+          </a>
+          <a class="collection-card" href="all%20items/item2.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Bastet.jpeg" alt="Bastet Relics" loading="lazy" decoding="async">
+            <span class="collection-card__count">10 pieces</span>
+            <div class="collection-card__body">
+              <h2 class="collection-card__title">Bastet Relics</h2>
+              <p class="collection-card__desc">Enter the sanctuary of Bastet, the graceful feline goddess who guarded the home and brought joy to the ancient Egyptians. Our Bastet Relics collection</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item3.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Pharaonic-Style%20Statement%20Table.jpeg" alt="Statement Tables" loading="lazy" decoding="async">
+            <span class="collection-card__count">29 pieces</span>
+            <div class="collection-card__body">
+              <h2 class="collection-card__title">Statement Tables</h2>
+              <p class="collection-card__desc">Pharaonic-Style Statement Tables Elevate your space with furniture inspired by the grandeur of ancient Egypt. These statement tables combine functiona</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item4.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Royal%20Adornments.jpeg" alt="Royal Adornments" loading="lazy" decoding="async">
+            <span class="collection-card__count">12 pieces</span>
+            <div class="collection-card__body">
+              <h2 class="collection-card__title">Royal Adornments</h2>
+              <p class="collection-card__desc">Step into a world of luxury and heritage. This collection showcases accessories inspired by royal elegance, designed to reflect power, beauty, and sop</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item5.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Stone&amp;%20Inscribed%20Tablets.jpeg" alt="Inscribed Tablets" loading="lazy" decoding="async">
+            <span class="collection-card__count">20 pieces</span>
+            <div class="collection-card__body">
+              <h2 class="collection-card__title">Inscribed Tablets</h2>
+              <p class="collection-card__desc">Experience art that transcends time. Our sculptures capture elegance, history, and craftsmanship, inspired by iconic forms that have shaped cultures a</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item6.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Timeless%20Sculptures.jpeg" alt="Timeless Sculptures" loading="lazy" decoding="async">
+            <span class="collection-card__count">30 pieces</span>
+            <div class="collection-card__body">
+              <h2 class="collection-card__title">Timeless Sculptures</h2>
+              <p class="collection-card__desc">Bring the presence of the ancients into your space. Our collection features meticulously crafted statues of kings, queens, and deities, embodying the </p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item7.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Papyrus%20Art.jpeg" alt="Papyrus Art" loading="lazy" decoding="async">
+            <span class="collection-card__count">9 pieces</span>
+            <div class="collection-card__body">
+              <h2 class="collection-card__title">Papyrus Art</h2>
+              <p class="collection-card__desc">Step into the timeless world of ancient Egyptian artistry through our Papyrus Art collection. Each handcrafted piece transforms authentic papyrus into</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <section class="categories-section">
-        <h2 class="section-title ">Explore All Categories</h2>
-
-        <div class="category-grid">
-
-            <a href="./all items/Item1.html" class="cat-card ">
-                <img src="images/Ancient Egyptian Style Candle.jpeg" alt="Ancient Egyptian Style Candle">
-                <div class="cat-overlay">
-                    <h3>Sacred Candles</h3>
-                    <span class="explore-text">View Collection</span>
-                </div>
-            </a>
-
-            <a href="./all items/item2.html" class="cat-card " style="transition-delay: 0.1s;">
-                <img src="images/Bastet.jpeg" alt="Bastet Statues">
-                <div class="cat-overlay">
-                    <h3>Bastet Relics</h3>
-                    <span class="explore-text">View Collection</span>
-                </div>
-            </a>
-
-            <a href="./all items/item3.html" class="cat-card " style="transition-delay: 0.2s;">
-                <img src="images/Pharaonic-Style Statement Table.jpeg" alt="Pharaonic Style Furniture">
-                <div class="cat-overlay">
-                    <h3>Pharaonic-Style Statement Table</h3>
-                    <span class="explore-text">View Collection</span>
-                </div>
-            </a>
-
-            <a href="./all items/item4.html" class="cat-card ">
-                <img src="images/Royal Adornments.jpeg" alt="Royal Adornments">
-                <div class="cat-overlay">
-                    <h3>Royal Adornments</h3>
-                    <span class="explore-text">View Collection</span>
-                </div>
-            </a>
-
-            <a href="./all items/item5.html" class="cat-card " style="transition-delay: 0.1s;">
-                <img src="images/Stone& Inscribed Tablets.jpeg" alt="Inscribed Tablets">
-                <div class="cat-overlay">
-                    <h3>Inscribed Tablets</h3>
-                    <span class="explore-text">View Collection</span>
-                </div>
-            </a>
-
-            <a href="./all items/item6.html" class="cat-card " style="transition-delay: 0.2s;">
-                <img src="./images/Timeless Sculptures.jpeg" alt="Timeless Sculptures">
-                <div class="cat-overlay">
-                    <h3>Statues</h3>
-                    <span class="explore-text">View Collection</span>
-                </div>
-            </a>
-
-
-             <a href="./all items/item7.html" class="cat-card " style="transition-delay: 0.2s;">
-                <img src="images/Papyrus Art.jpeg" alt="papyrus">
-                <div class="cat-overlay">
-                    <h3>Papyrus Art</h3>
-                    <span class="explore-text">View Collection</span>
-                </div>
-            </a> 
-    
-    </section>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <h2 class="logo">Aman <span>Bazaar</span></h2>
-            <p>&copy; 2026 Aman Bazaar. All rights reserved. Preserving History, Illuminating the Future.</p>
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true">&#x13080;</span>
+            Aman <span>Bazaar</span>
+          </a>
+          <p>Preserving History, Illuminating the Future. A curated bazaar of heritage-inspired sculpture, adornment and decorative art.</p>
+          <div class="socials">
+            <a class="social" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42l-.47-.01c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.18 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg></a>
+            <a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+            <a class="social" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2a1 1 0 0 1 1-1Z"/></svg></a>
+          </div>
         </div>
-    </footer>
+        <div>
+          <h3>Collections</h3>
+          <div class="footer__links">
+            <a href="all%20items/Item1.html">Sacred Candles</a>
+            <a href="all%20items/item2.html">Bastet Relics</a>
+            <a href="all%20items/item3.html">Statement Tables</a>
+            <a href="all%20items/item4.html">Royal Adornments</a>
+          </div>
+        </div>
+        <div>
+          <h3>Discover</h3>
+          <div class="footer__links">
+            <a href="categories.html">All Collections</a>
+            <a href="story.html">Our Story</a>
+            <a href="all%20items/about.html">About Us</a>
+            <a href="cart.html">Your Collection</a>
+          </div>
+        </div>
+        <div>
+          <h3>Service</h3>
+          <div class="footer__links">
+            <a href="index.html#faq">Delivery &amp; Returns</a>
+            <a href="index.html#faq">Frequently Asked</a>
+            <a href="https://wa.me/" target="_blank" rel="noopener">Talk to a Curator</a>
+          </div>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Aman Bazaar. Designed with <a href="https://alaa743.github.io/A-laa/" target="_blank" rel="noopener">A'laa Hany &gt;&lt;.</a></p>
+        <nav aria-label="Legal">
+          <a href="index.html#faq">Privacy</a>
+          <a href="index.html#faq">Terms</a>
+          <a href="index.html#faq">Shipping</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+  <div class="search" id="search" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search__bar">
+      <label class="visually-hidden" for="search-input">Search the collection</label>
+      <input class="search__input" id="search-input" type="search" placeholder="Search the archives&hellip;" autocomplete="off">
+      <button class="icon-btn" type="button" data-search-close aria-label="Close search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="search__results"></div>
+  </div>
+
+  <div class="drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="drawer" id="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Your collection">
+    <div class="drawer__head">
+      <h2>Your Collection</h2>
+      <button class="drawer__close" type="button" data-cart-close aria-label="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="drawer__body"></div>
+    <div class="drawer__foot" hidden>
+      <dl class="cart-total cart-total--grand">
+        <dt>Subtotal</dt>
+        <dd id="drawer-subtotal">$0.00</dd>
+      </dl>
+      <p class="cart-note">Shipping is calculated at checkout. Inspect before you pay the courier.</p>
+      <a class="btn btn--block" href="cart.html">Review &amp; Checkout</a>
+    </div>
+  </aside>
+
+  <script src="catalogue.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

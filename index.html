@@ -1,228 +1,596 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-base="">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aman Bazaar | Ancient Luxury & Artifacts</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aman Bazaar | Ancient Luxury, Artifacts &amp; Heritage Decor</title>
+  <meta name="description" content="A curated bazaar of 134 heritage-inspired pieces — sculpture, royal adornment, inscribed tablets and papyrus art, hand-finished and delivered across Egypt in 2–5 days.">
+  <meta name="theme-color" content="#0a1020">
+  <meta property="og:site_name" content="Aman Bazaar">
+  <meta property="og:title" content="Aman Bazaar | Ancient Luxury, Artifacts &amp; Heritage Decor">
+  <meta property="og:description" content="A curated bazaar of 134 heritage-inspired pieces — sculpture, royal adornment, inscribed tablets and papyrus art, hand-finished and delivered across Egypt in 2–5 days.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/background.jpeg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a1020'/%3E%3Cg fill='none' stroke='%23c8a04f' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='16' cy='9.5' r='4.3'/%3E%3Cpath d='M16 14v12M10.5 18h11'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,400..700;1,400..700&family=Inter:wght@300..700&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
- 
-  <div class="gate" id="gate">
-    <div class="door left"></div>
-    <div class="door right"></div>
-    <div class="gate-content">
-      <h1 class="gate-title">𓂀 AMAN BAZAAR 𓂀</h1>
-      <p>Enter the Realm of Antiquity</p>
-      <!-- <button id="enter-btn" class="gold-btn">Unlock the Gates</button> -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">&#x13080;</span>
+        Aman <span>Bazaar</span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <a class="nav__link" href="index.html" aria-current="page">Home</a>
+        <a class="nav__link" href="categories.html">Collections</a>
+        <a class="nav__link" href="story.html">Our Story</a>
+        <a class="nav__link" href="all%20items/about.html">About</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" type="button" data-search-open aria-label="Search the collection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+        <button class="icon-btn" type="button" data-cart-open aria-label="Open your collection">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" aria-hidden="true">0</span>
+        </button>
+        <button class="icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="gate" id="gate" role="presentation">
+    <div class="gate__door gate__door--l"></div>
+    <div class="gate__door gate__door--r"></div>
+    <div class="gate__content">
+      <p class="gate__glyphs" aria-hidden="true">&#x13080; &#x132F9; &#x13171;</p>
+      <p class="gate__title">Aman Bazaar</p>
+      <p class="gate__sub">Enter the realm of antiquity</p>
+      <div class="gate__bar"></div>
     </div>
   </div>
 
-  <div class="home-wrapper" id="home-content">
+  <main id="main">
+    <section class="hero">
+      <div class="hero__media" style="background-image:url('images/background.jpeg')" data-parallax="0.12" role="img" aria-label="Lamplit temple hall"></div>
+      <div class="hero__glyphs" aria-hidden="true">
+        <span style="animation-delay:0s">&#x13080;</span>
+        <span style="animation-delay:.6s">&#x132F9;</span>
+        <span style="animation-delay:1.2s">&#x13171;</span>
+        <span style="animation-delay:1.8s">&#x1320B;</span>
+      </div>
 
-    <header class="navbar">
-      <div class="nav-container">
-        <a href="#" class="logo">Aman <span>Bazaar</span></a>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="categories.html">Collections</a></li>
-            <li><a href="story.html">Our Story</a></li>
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">Heritage &middot; Artistry &middot; Craft</p>
+          <h1 class="hero__title">
+            <span class="line" style="--i:0"><span>Where the ancient</span></span>
+            <span class="line" style="--i:1"><span><em>world</em> still trades</span></span>
+          </h1>
+          <p class="hero__lede">
+            134 handcrafted pieces across 7 collections &mdash; sculpture, adornment,
+            inscribed stone and papyrus, each made to carry a story into a modern room.
+          </p>
+          <div class="hero__actions">
+            <a class="btn" href="categories.html">Explore the Bazaar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <button class="btn btn--ghost" type="button" data-search-open>Search the archives</button>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <p class="stat__num"><span data-count="134" data-suffix="+">0</span></p>
+              <p class="stat__label">Pieces in stock</p>
+            </div>
+            <div class="stat">
+              <p class="stat__num"><span data-count="7">0</span></p>
+              <p class="stat__label">Collections</p>
+            </div>
+            <div class="stat">
+              <p class="stat__num"><span data-count="48" data-suffix="h">0</span></p>
+              <p class="stat__label">Typical dispatch</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Hand-finished&nbsp;<span></span></span><span>Inspect before you pay&nbsp;<span></span></span>
+        <span>Insured delivery&nbsp;<span></span></span><span>2&ndash;5 day dispatch&nbsp;<span></span></span>
+        <span>Certificate of provenance&nbsp;<span></span></span>
+      </div>
+      <div class="marquee__track">
+        <span>Hand-finished&nbsp;<span></span></span><span>Inspect before you pay&nbsp;<span></span></span>
+        <span>Insured delivery&nbsp;<span></span></span><span>2&ndash;5 day dispatch&nbsp;<span></span></span>
+        <span>Certificate of provenance&nbsp;<span></span></span>
+      </div>
+    </div>
+
+    <section class="section" id="collections">
+      <div class="shell">
+        <div class="section-head">
+          <div data-reveal>
+            <p class="eyebrow">The Collections</p>
+            <h2 class="section-title">Discover the eras</h2>
+          </div>
           
-          </ul>
+          <a class="text-link" href="categories.html" data-reveal>All 7 collections <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+
+        <div class="collection-grid collection-grid--feature" data-reveal-group>
+          <a class="collection-card" href="all%20items/Item1.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Ancient%20Egyptian%20Style%20Candle.jpeg" alt="Sacred Candles" loading="lazy" decoding="async">
+            <span class="collection-card__count">24 pieces</span>
+            <div class="collection-card__body">
+              <h3 class="collection-card__title">Sacred Candles</h3>
+              <p class="collection-card__desc">Antique candle holders are not just lighting tools, but true artistic pieces that carry the spirit of ancient civilizations within their design. Caref</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item2.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Bastet.jpeg" alt="Bastet Relics" loading="lazy" decoding="async">
+            <span class="collection-card__count">10 pieces</span>
+            <div class="collection-card__body">
+              <h3 class="collection-card__title">Bastet Relics</h3>
+              <p class="collection-card__desc">Enter the sanctuary of Bastet, the graceful feline goddess who guarded the home and brought joy to the ancient Egyptians. Our Bastet Relics collection</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item3.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Pharaonic-Style%20Statement%20Table.jpeg" alt="Statement Tables" loading="lazy" decoding="async">
+            <span class="collection-card__count">29 pieces</span>
+            <div class="collection-card__body">
+              <h3 class="collection-card__title">Statement Tables</h3>
+              <p class="collection-card__desc">Pharaonic-Style Statement Tables Elevate your space with furniture inspired by the grandeur of ancient Egypt. These statement tables combine functiona</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item4.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Royal%20Adornments.jpeg" alt="Royal Adornments" loading="lazy" decoding="async">
+            <span class="collection-card__count">12 pieces</span>
+            <div class="collection-card__body">
+              <h3 class="collection-card__title">Royal Adornments</h3>
+              <p class="collection-card__desc">Step into a world of luxury and heritage. This collection showcases accessories inspired by royal elegance, designed to reflect power, beauty, and sop</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a class="collection-card" href="all%20items/item5.html" data-reveal="zoom">
+            <img class="collection-card__img" src="images/Stone&amp;%20Inscribed%20Tablets.jpeg" alt="Inscribed Tablets" loading="lazy" decoding="async">
+            <span class="collection-card__count">20 pieces</span>
+            <div class="collection-card__body">
+              <h3 class="collection-card__title">Inscribed Tablets</h3>
+              <p class="collection-card__desc">Experience art that transcends time. Our sculptures capture elegance, history, and craftsmanship, inspired by iconic forms that have shaped cultures a</p>
+              <span class="collection-card__cta">View collection <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="shell">
+        <div class="section-head">
+          <div data-reveal>
+            <p class="eyebrow">Hand-picked</p>
+            <h2 class="section-title">Featured artifacts</h2>
+          </div>
+          <a class="text-link" href="categories.html" data-reveal>Browse everything <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+
+        <div class="product-grid" data-reveal-group>
+          <article class="product-card" data-reveal data-product
+                   data-name="Majestic Winged Goddess Candelabra" data-price="100" data-search="majestic winged goddess candelabra sacred candles stunning pair in black and gold finish, featuring deities with expansive wings." style="--d:0">
+            <div class="product-card__media">
+              <img src="all%20items/Items/Ancient%20Egyptian%20Style%20Candle/ca15.jpeg" alt="Majestic Winged Goddess Candelabra" loading="lazy" decoding="async">
+              <span class="product-card__tag">Sacred Candles</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="majestic-winged-goddess-candelabra" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Eternal Flame Series</p>
+              <h3 class="product-card__title"><a href="products/Majestic%20Winged%20Goddess%20Candelabra.html">Majestic Winged Goddess Candelabra</a></h3>
+              <p class="product-card__desc">Stunning pair in black and gold finish, featuring deities with expansive wings.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$100.00</span>
+                <a class="product-card__link" href="products/Majestic%20Winged%20Goddess%20Candelabra.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Royal Enthroned Pillar Holder" data-price="65" data-search="royal enthroned pillar holder sacred candles a majestic architectural piece featuring two royal figures seated back-to-back against a central pillar." style="--d:70">
+            <div class="product-card__media">
+              <img src="all%20items/Items/Ancient%20Egyptian%20Style%20Candle/ca18.jpeg" alt="Royal Enthroned Pillar Holder" loading="lazy" decoding="async">
+              <span class="product-card__tag">Sacred Candles</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="royal-enthroned-pillar-holder" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Eternal Flame Series</p>
+              <h3 class="product-card__title"><a href="products/Royal%20Enthroned%20Pillar%20Holder.html">Royal Enthroned Pillar Holder</a></h3>
+              <p class="product-card__desc">A majestic architectural piece featuring two royal figures seated back-to-back against a central pillar.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$65.00</span>
+                <a class="product-card__link" href="products/Royal%20Enthroned%20Pillar%20Holder.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Hieroglyphic Bastet Table Lamp" data-price="115" data-search="hieroglyphic bastet table lamp bastet relics where functionality meets ancient art. this unique lamp features a professionally crafted bastet base paired with a shade adorned in golden hieroglyphs." style="--d:140">
+            <div class="product-card__media">
+              <img src="all%20items/Items/Bastet%20Relics/cat4.jpeg" alt="Hieroglyphic Bastet Table Lamp" loading="lazy" decoding="async">
+              <span class="product-card__tag">Bastet Relics</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="hieroglyphic-bastet-table-lamp" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Chronicles of Bubastis Series</p>
+              <h3 class="product-card__title"><a href="product2/Hieroglyphic%20Bastet%20Table%20Lamp.html">Hieroglyphic Bastet Table Lamp</a></h3>
+              <p class="product-card__desc">Where functionality meets ancient art. This unique lamp features a professionally crafted Bastet base paired with a shade adorned in golden hieroglyphs.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$115.00</span>
+                <a class="product-card__link" href="product2/Hieroglyphic%20Bastet%20Table%20Lamp.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Bastet Guardian Set (Twin Statues)" data-price="90" data-search="bastet guardian set (twin statues) bastet relics a perfectly balanced set of two statues, each featuring slightly different ceremonial collars and symbols." style="--d:210">
+            <div class="product-card__media">
+              <img src="all%20items/Items/Bastet%20Relics/cat10.jpeg" alt="Bastet Guardian Set (Twin Statues)" loading="lazy" decoding="async">
+              <span class="product-card__tag">Bastet Relics</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="bastet-guardian-set-twin-statues" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Chronicles of Bubastis Series</p>
+              <h3 class="product-card__title"><a href="product2/Bastet%20Guardian%20Set%20(Twin%20Statues).html">Bastet Guardian Set (Twin Statues)</a></h3>
+              <p class="product-card__desc">A perfectly balanced set of two statues, each featuring slightly different ceremonial collars and symbols.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$90.00</span>
+                <a class="product-card__link" href="product2/Bastet%20Guardian%20Set%20(Twin%20Statues).html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="The Guardian Anubis Console" data-price="190" data-search="the guardian anubis console statement tables an extraordinary console table supported by two standing anubis figures. the deep crimson and gold accents highlight the intricate hieroglyphic carvings on the…" style="--d:0">
+            <div class="product-card__media">
+              <img src="all%20items/Items/Pharaonic-Style%20Statement%20Table/table29.jpeg" alt="The Guardian Anubis Console" loading="lazy" decoding="async">
+              <span class="product-card__tag">Statement Tables</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="the-guardian-anubis-console" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Royal Interiors Series</p>
+              <h3 class="product-card__title"><a href="product3/The%20Guardian%20Anubis%20Console.html">The Guardian Anubis Console</a></h3>
+              <p class="product-card__desc">An extraordinary console table supported by two standing Anubis figures. The deep crimson and gold accents highlight the intricate hieroglyphic carvings on the…</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$190.00</span>
+                <a class="product-card__link" href="product3/The%20Guardian%20Anubis%20Console.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="The Royal Sarcophagus Coffee Table" data-price="155" data-search="the royal sarcophagus coffee table statement tables the ultimate showstopper. a full color, detailed royal sarcophagus rests beneath a heavy glass top, flanked by temple pillars." style="--d:70">
+            <div class="product-card__media">
+              <img src="all%20items/Items/Pharaonic-Style%20Statement%20Table/table11.jpeg" alt="The Royal Sarcophagus Coffee Table" loading="lazy" decoding="async">
+              <span class="product-card__tag">Statement Tables</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="the-royal-sarcophagus-coffee-table" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Royal Interiors Series</p>
+              <h3 class="product-card__title"><a href="product3/The%20Royal%20Sarcophagus%20Coffee%20Table.html">The Royal Sarcophagus Coffee Table</a></h3>
+              <p class="product-card__desc">The ultimate showstopper. A full color, detailed royal sarcophagus rests beneath a heavy glass top, flanked by temple pillars.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$155.00</span>
+                <a class="product-card__link" href="product3/The%20Royal%20Sarcophagus%20Coffee%20Table.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Traditional Nubian/Upper Egyptian Bridal Set" data-price="200" data-search="traditional nubian/upper egyptian bridal set royal adornments a magnificent multi-piece jewelry set including a tiered headpiece (kirdan style), elongated earrings, and layered necklaces." style="--d:140">
+            <div class="product-card__media">
+              <img src="all%20items/Items/Royal%20Adornment/Ac9.jpeg" alt="Traditional Nubian/Upper Egyptian Bridal Set" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="traditional-nubian-upper-egyptian-bridal-set" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="product4/Traditional%20Nubian.html">Traditional Nubian/Upper Egyptian Bridal Set</a></h3>
+              <p class="product-card__desc">A magnificent multi-piece jewelry set including a tiered headpiece (Kirdan style), elongated earrings, and layered necklaces.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$200.00</span>
+                <a class="product-card__link" href="product4/Traditional%20Nubian.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Turquoise Beaded Wesekh Collar" data-price="85" data-search="turquoise beaded wesekh collar royal adornments a handcrafted egyptian-style broad collar (wesekh) featuring intricate gold-tone seed beads and stunning turquoise teardrop focal points." style="--d:210">
+            <div class="product-card__media">
+              <img src="all%20items/Items/Royal%20Adornment/Ac10.jpeg" alt="Turquoise Beaded Wesekh Collar" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="turquoise-beaded-wesekh-collar" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="product4/Turquoise%20Beaded%20Wesekh%20Collar.html">Turquoise Beaded Wesekh Collar</a></h3>
+              <p class="product-card__desc">A handcrafted Egyptian-style broad collar (Wesekh) featuring intricate gold-tone seed beads and stunning turquoise teardrop focal points.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$85.00</span>
+                <a class="product-card__link" href="product4/Turquoise%20Beaded%20Wesekh%20Collar.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="split">
+          <div class="split__media" data-reveal="left">
+            <img src="images/Timeless%20Sculptures.jpeg" alt="A sculptor's finished work" loading="lazy" decoding="async">
+          </div>
+          <div data-reveal="right">
+            <p class="eyebrow">Our craft</p>
+            <h2 class="section-title">Every piece arrives with its story</h2>
+            <p class="section-lede">
+              Aman Bazaar began with a shared love of history and the objects that outlive us. We work with small
+              workshops who still cast, paint and finish by hand, then we photograph, weigh and check each piece
+              ourselves before it is listed.
+            </p>
+            <p class="section-lede">
+              The result is a bazaar where a candle holder, a collar or a statement table can sit in a modern room
+              and still speak of the civilisation that inspired it.
+            </p>
+            <p style="margin-top:2rem"><a class="text-link" href="story.html">Read our story <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="shell">
+        <div class="value-grid" data-reveal-group>
+          <div class="value-card" data-reveal>
+            <span class="value-card__glyph" aria-hidden="true">&#x13080;</span>
+            <h3>Curated, not catalogued</h3>
+            <p>Every piece is chosen by hand. If it would not earn a place in our own homes, it does not reach the bazaar.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <span class="value-card__glyph" aria-hidden="true">&#x132F9;</span>
+            <h3>Made by artisans</h3>
+            <p>Cast, painted and finished in small workshops, so the detail holds up when you look closely.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <span class="value-card__glyph" aria-hidden="true">&#x13171;</span>
+            <h3>Inspect before you pay</h3>
+            <p>Open the parcel at your door. Pay the courier only once you are satisfied with what you see.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <span class="value-card__glyph" aria-hidden="true">&#x1320B;</span>
+            <h3>Packed like a loan piece</h3>
+            <p>Double-boxed with moulded protection and insured in transit, anywhere we ship.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="shell">
+        <div class="section-head section-head--center">
+          <div data-reveal>
+            <p class="eyebrow">Kind words</p>
+            <h2 class="section-title">What collectors say</h2>
+          </div>
+        </div>
+
+        <div class="testimonials" data-slider data-reveal tabindex="0" aria-roledescription="carousel" aria-label="Customer reviews">
+          <div class="testimonials__viewport">
+            <div class="testimonials__track">
+              <blockquote class="testimonial">
+                <p class="testimonial__stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p class="testimonial__quote">&ldquo;The Winged Isis candelabra arrived better than the photographs. The weight of it alone tells you it was made with care.&rdquo;</p>
+                <footer class="testimonial__author">Sarah Mahmoud<span class="testimonial__role">Interior designer, Cairo</span></footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="testimonial__stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p class="testimonial__quote">&ldquo;I inspected the piece at my door before paying, exactly as promised. That confidence is rare when buying art online.&rdquo;</p>
+                <footer class="testimonial__author">Ashraf Hassan<span class="testimonial__role">Collector, Alexandria</span></footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="testimonial__stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p class="testimonial__quote">&ldquo;Ordered a Bastet relic as a wedding gift. It was wrapped like a museum loan and landed in three days.&rdquo;</p>
+                <footer class="testimonial__author">Amina Mansour<span class="testimonial__role">Gallery curator</span></footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="testimonial__stars" aria-label="Five out of five stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p class="testimonial__quote">&ldquo;The statement table is the first thing anyone comments on. It anchors the entire room.&rdquo;</p>
+                <footer class="testimonial__author">David Aly<span class="testimonial__role">Architect, Giza</span></footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="testimonials__nav">
+            <button class="testimonials__arrow" type="button" data-slide="-1" aria-label="Previous review"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <div class="testimonials__dots" role="tablist">
+              <button type="button" role="tab" data-slide-to="0" aria-selected="true" aria-label="Review 1"></button>
+              <button type="button" role="tab" data-slide-to="1" aria-selected="false" aria-label="Review 2"></button>
+              <button type="button" role="tab" data-slide-to="2" aria-selected="false" aria-label="Review 3"></button>
+              <button type="button" role="tab" data-slide-to="3" aria-selected="false" aria-label="Review 4"></button>
+            </div>
+            <button class="testimonials__arrow" type="button" data-slide="1" aria-label="Next review"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="shell shell--narrow">
+        <div class="section-head section-head--center">
+          <div data-reveal>
+            <p class="eyebrow">Good to know</p>
+            <h2 class="section-title">Frequently asked</h2>
+          </div>
+        </div>
+
+        <div class="faq" data-reveal-group>
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-0" id="faq-q-0">
+              Are there any additional fees or taxes?<span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a" id="faq-a-0" role="region" aria-labelledby="faq-q-0">
+              <div><p>Our pricing is transparent: the amount at checkout is the amount you pay. No further taxes or service fees are added on delivery.</p></div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
+              Can I inspect the order before paying the courier?<span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+              <div><p>Yes. You may open and inspect the piece at your door to verify its condition and quality before completing payment.</p></div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
+              Do you have a physical store I can visit?<span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+              <div><p>We operate exclusively as an online boutique. That keeps our overheads low and our quality standards high, and it is why our pricing stays competitive.</p></div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
+              How long does delivery take?<span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+              <div><p>Two to five business days across Egypt. You will receive a notification the moment your order is dispatched.</p></div>
+            </div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
+              How should I care for a piece?<span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+              <div><p>Dust with a dry, soft cloth. Keep resin and gilt finishes out of direct sunlight and away from damp, and never use solvent-based cleaners.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="shell">
+        <div class="newsletter" data-reveal>
+          <p class="eyebrow" style="color:var(--gold-500)">Join the bazaar</p>
+          <h2>New arrivals, first look</h2>
+          <p>One letter a month: newly unearthed pieces, workshop notes and nothing else.</p>
+          <form class="newsletter__form" data-newsletter novalidate>
+            <label class="visually-hidden" for="nl-email">Email address</label>
+            <input id="nl-email" type="email" name="email" placeholder="your@email.com" required>
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true">&#x13080;</span>
+            Aman <span>Bazaar</span>
+          </a>
+          <p>Preserving History, Illuminating the Future. A curated bazaar of heritage-inspired sculpture, adornment and decorative art.</p>
+          <div class="socials">
+            <a class="social" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42l-.47-.01c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.18 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg></a>
+            <a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+            <a class="social" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2a1 1 0 0 1 1-1Z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3>Collections</h3>
+          <div class="footer__links">
+            <a href="all%20items/Item1.html">Sacred Candles</a>
+            <a href="all%20items/item2.html">Bastet Relics</a>
+            <a href="all%20items/item3.html">Statement Tables</a>
+            <a href="all%20items/item4.html">Royal Adornments</a>
+          </div>
+        </div>
+        <div>
+          <h3>Discover</h3>
+          <div class="footer__links">
+            <a href="categories.html">All Collections</a>
+            <a href="story.html">Our Story</a>
+            <a href="all%20items/about.html">About Us</a>
+            <a href="cart.html">Your Collection</a>
+          </div>
+        </div>
+        <div>
+          <h3>Service</h3>
+          <div class="footer__links">
+            <a href="index.html#faq">Delivery &amp; Returns</a>
+            <a href="index.html#faq">Frequently Asked</a>
+            <a href="https://wa.me/" target="_blank" rel="noopener">Talk to a Curator</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Aman Bazaar. Designed with <a href="https://alaa743.github.io/A-laa/" target="_blank" rel="noopener">A'laa Hany &gt;&lt;.</a></p>
+        <nav aria-label="Legal">
+          <a href="index.html#faq">Privacy</a>
+          <a href="index.html#faq">Terms</a>
+          <a href="index.html#faq">Shipping</a>
         </nav>
       </div>
-    </header>
-
-    <section class="main-hero">
-      <div class="hero-overlay">
-        <div class="hero-text reveal">
-          <span class="subtitle">Welcome to</span>
-          <h1>Aman Bazaar</h1>
-          <p>Welcome to AMAN BAZAR
-
-            Discover a unique shopping experience where ancient inspiration meets modern creativity. AMAN BAZAR is more
-            than just a marketplace — it is a journey through time, celebrating the beauty of Egyptian heritage and
-            artistic craftsmanship.
-
-            Our bazaar brings together a carefully curated collection of handmade and culturally inspired pieces,
-            including timeless sculptures, engraved tablets, royal-style decorations, and exclusive artistic
-            accessories. Each item is thoughtfully designed to reflect history, identity, and elegance in a modern form.
-
-            At AMAN BAZAR, we believe that every piece tells a story. Whether you are looking to decorate your space,
-            find a meaningful gift, or simply explore something artistic and unique, our collections are designed to
-            inspire and connect you with the richness of the past.
-
-            Step inside, explore our world, and let AMAN BAZAR bring heritage, art, and creativity into your everyday
-            life.
-          </p>
-          <a href="./categories.html" class="gold-btn">Explore the Bazaar</a>
-        </div>
-      </div>
-    </section>
-    
-
-    <section id="collections" class="categories-section">
-      <h2 class="section-title reveal">Discover the Eras</h2>
-      <div class="category-grid">
-
-        <a href="./all items/Item1.html" class="cat-card reveal">
-          <img src="./images/Ancient Egyptian Style Candle.jpeg" alt="Pharaonic Fashion">
-          <div class="cat-overlay">
-            <h3>Pharaonic Fashion</h3>
-            <span class="explore-text">Explore</span>
-          </div>
-        </a>
-
-        <a href="./all items/item5.html" class="cat-card reveal" style="transition-delay: 0.1s;">
-          <img src="./images/Stone& Inscribed Tablets.jpeg" alt="Temple Decor">
-          <div class="cat-overlay">
-            <h3>Temple Decor</h3>
-            <span class="explore-text">Explore</span>
-          </div>
-        </a>
-
-        <a href="./all items/item6.html" class="cat-card reveal" style="transition-delay: 0.2s;">
-          <img src="./images/Timeless Sculptures.jpeg" alt="Sacred Statues">
-          <div class="cat-overlay">
-            <h3>Sacred Statues</h3>
-            <span class="explore-text">Explore</span>
-          </div>
-        </a> 
-        </div>
-      </div>
-    </section>
-
-    
-
-    <!-- Reviews Section By Alaa Mohammed-->
-
-    <section class="section-wrapper reveal">
-    <div class="slider-container">
-        <h2 class="review-title">Reviews of Our Clients</h2>
-        
-        <!-- Logic Radios -->
-        <input type="radio" name="slider" id="s1" checked>
-        <input type="radio" name="slider" id="s2">
-        <input type="radio" name="slider" id="s3">
-        <input type="radio" name="slider" id="s4">
-
-        <!-- Arrows -->
-        <label for="s1" class="arrow prev to1">&lt;</label>
-        <label for="s2" class="arrow prev to2">&lt;</label>
-        <label for="s3" class="arrow prev to3">&lt;</label>
-        
-        <label for="s2" class="arrow next to2">&gt;</label>
-        <label for="s3" class="arrow next to3">&gt;</label>
-        <label for="s4" class="arrow next to4">&gt;</label>
-
-        <div class="viewport">
-            <div class="slides-track">
-                <div class="card">
-                    <p class="testimonial-text">"The implementation was seamless, and the results were immediate. Highly recommended for any growing business."</p>
-                    <div class="user-info"><h4>Sarah Mahmoud</h4></div>
-                </div>
-                <div class="card">
-                    <p class="testimonial-text">"Expertly designed and incredibly user-friendly. It balances power and simplicity perfectly."</p>
-                    <div class="user-info"><h4>Ashraf Hassan </h4></div>
-                </div>
-                <div class="card">
-                    <p class="testimonial-text">"Customer support is top-notch. They were there with a solution within minutes. Truly impressive."</p>
-                    <div class="user-info"><h4>Amina Mansour</h4></div>
-                </div>
-                <div class="card">
-                    <p class="testimonial-text">"This has completely transformed how we handle our data. I cannot imagine going back."</p>
-                    <div class="user-info"><h4>David Aly</h4></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="dots">
-            <label for="s1"></label>
-            <label for="s2"></label>
-            <label for="s3"></label>
-            <label for="s4"></label>
-        </div>
     </div>
-</section>
+  </footer>
 
-    <!-- FAQs Section By Alaa Mohammed-->
+  <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
 
-    <section class="full-width-section">
-    <div class="faq-container" style="margin: 20px auto;">
-        <h2 class="faq-title">Frequently Asked Questions</h2>
-
-        <div class="accordion-item">
-            <input type="checkbox" id="faq1">
-            <label class="accordion-header" for="faq1">Are there any additional fees or taxes?</label>
-            <div class="accordion-content">
-                <p>Our pricing policy is transparent; the final checkout amount is all you will have to pay. No further taxes or service fees are required upon delivery</p>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="checkbox" id="faq2">
-            <label class="accordion-header" for="faq2">Can I check the order before paying the courier?</label>
-            <div class="accordion-content">
-                <p>Yes our policy allows customers to inspect the product upon delivery to verify its condition and quality before finalizing the payment.</p>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="checkbox" id="faq3">
-            <label class="accordion-header" for="faq3">Do you have a physical store I can visit?</label>
-            <div class="accordion-content">
-                <p>Currently, we operate exclusively as an authorized online boutique. This model allows us to maintain the highest quality standards at competitive prices.</p>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="checkbox" id="faq4">
-            <label class="accordion-header" for="faq4">How long does delivery take?</label>
-            <div class="accordion-content">
-                <p>The estimated delivery timeframe is 2 to 5 business days. You will receive a notification once your order has been dispatched for delivery.</p>
-            </div>
-        </div>
+  <div class="search" id="search" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search__bar">
+      <label class="visually-hidden" for="search-input">Search the collection</label>
+      <input class="search__input" id="search-input" type="search" placeholder="Search the archives&hellip;" autocomplete="off">
+      <button class="icon-btn" type="button" data-search-close aria-label="Close search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
-    </section>
-
-    
-
-    <footer class="site-footer">
-      <div class="footer-content">
-        <h2 class="logo">Aman <span>Bazaar</span></h2>
-        <p>Preserving History, Illuminating the Future.</p>
-
-        <!-- Social Media Icons Start -->
-    <div class="footer-social">
-        <a href="#" target="_blank" class="social-icon whatsapp">
-            <img src="https://www.svgrepo.com/show/475692/whatsapp-color.svg" alt="WhatsApp">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram">
-            <img src="https://www.svgrepo.com/show/333552/instagram.svg" alt="Instagram">
-        </a>
-        <a href="https://facebook.com/" target="_blank" class="social-icon facebook">
-            <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook">
-        </a>
-    </div>
-    <!-- Social Media Icons End -->
-
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Shipping</a>
-        </div>
-        <p class="copyright">&copy; 2026 Aman Bazaar. All rights reserved.</p>
-      </div>
-    </footer>
-
+    <div class="search__results"></div>
   </div>
 
+  <div class="drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="drawer" id="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Your collection">
+    <div class="drawer__head">
+      <h2>Your Collection</h2>
+      <button class="drawer__close" type="button" data-cart-close aria-label="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="drawer__body"></div>
+    <div class="drawer__foot" hidden>
+      <dl class="cart-total cart-total--grand">
+        <dt>Subtotal</dt>
+        <dd id="drawer-subtotal">$0.00</dd>
+      </dl>
+      <p class="cart-note">Shipping is calculated at checkout. Inspect before you pay the courier.</p>
+      <a class="btn btn--block" href="cart.html">Review &amp; Checkout</a>
+    </div>
+  </aside>
+
+  <script src="catalogue.js"></script>
   <script src="script.js"></script>
 </body>
 

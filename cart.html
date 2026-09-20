@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Our Story | Aman Bazaar</title>
-  <meta name="description" content="How four friends turned a shared love of history into a bazaar of handmade, heritage-inspired art — and what we promise every collector.">
+  <title>Your Collection | Aman Bazaar</title>
+  <meta name="description" content="Review the pieces in your collection and place your order. Inspect before you pay the courier.">
   <meta name="theme-color" content="#0a1020">
   <meta property="og:site_name" content="Aman Bazaar">
-  <meta property="og:title" content="Our Story | Aman Bazaar">
-  <meta property="og:description" content="How four friends turned a shared love of history into a bazaar of handmade, heritage-inspired art — and what we promise every collector.">
+  <meta property="og:title" content="Your Collection | Aman Bazaar">
+  <meta property="og:description" content="Review the pieces in your collection and place your order. Inspect before you pay the courier.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/background.jpeg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a1020'/%3E%3Cg fill='none' stroke='%23c8a04f' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='16' cy='9.5' r='4.3'/%3E%3Cpath d='M16 14v12M10.5 18h11'/%3E%3C/g%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +21,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="scroll-progress" aria-hidden="true"></div>
 
-  <header class="nav">
+  <header class="nav nav--solid">
     <div class="nav__inner">
       <a class="brand" href="index.html">
         <span class="brand__mark" aria-hidden="true">&#x13080;</span>
@@ -31,8 +30,8 @@
 
       <nav class="nav__menu" id="nav-menu" aria-label="Primary">
         <a class="nav__link" href="index.html">Home</a>
-        <a class="nav__link" href="categories.html">Collections</a>
-        <a class="nav__link" href="story.html" aria-current="page">Our Story</a>
+        <a class="nav__link" href="categories.html" aria-current="page">Collections</a>
+        <a class="nav__link" href="story.html">Our Story</a>
         <a class="nav__link" href="all%20items/about.html">About</a>
       </nav>
 
@@ -48,117 +47,80 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="page-hero">
-      <div class="page-hero__media" style="background-image:url('images/Stone&amp;%20Inscribed%20Tablets.jpeg')" data-parallax="0.1"></div>
-      <div class="page-hero__inner">
-        <p class="eyebrow" style="color:var(--gold-500)">Since the beginning</p>
-        <h1 class="page-hero__title">Our story</h1>
-        <p class="page-hero__lede">A shared passion for history, art and timeless beauty &mdash; and the bazaar it became.</p>
-      </div>
-    </section>
+  <main id="main" class="section section--tight">
+    <div class="shell" id="cart-page">
+      <nav aria-label="Breadcrumb" style="margin-bottom:2rem">
+        <ol class="crumbs">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Your collection</li>
+        </ol>
+      </nav>
 
-    <section class="section">
-      <div class="shell">
-        <div class="split">
-          <div data-reveal="left">
-            <div class="prose">
-              <p class="lead">
-                Aman Bazaar was created from a shared passion for history, art, culture and timeless beauty. What
-                started as a simple idea between friends grew into a vision: a place where people could discover
-                unique pieces inspired by civilisations from around the world.
-              </p>
-              <p>
-                Egyptian heritage remains at the heart of our identity, but the bazaar was never meant to stop at
-                one civilisation. Our collections represent different cultures, artistic styles and historical
-                inspirations &mdash; from ancient-inspired statues and handmade decoration to jewellery, inscribed
-                stone and collectible pieces. Every item tells a different story.
-              </p>
-              <p>
-                We believe art has no borders. Every civilisation leaves behind beauty, creativity and meaning, and
-                our goal is to bring those influences together in one bazaar.
-              </p>
-              <p>
-                The name <em>Aman</em> was drawn from the first letters of our own names &mdash; personal, and a word
-                that happens to mean safety and peace.
-              </p>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Checkout</p>
+          <h1 class="section-title">Your collection</h1>
+        </div>
+        <a class="text-link" href="categories.html">Keep browsing <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="cart-layout">
+        <div>
+          <div class="panel">
+            <h2 class="panel__title">Pieces</h2>
+            <div data-cart-list></div>
+          </div>
+
+          <div class="panel">
+            <h2 class="panel__title">Delivery details</h2>
+            <form id="checkout-form" class="form-grid" novalidate>
+              <div class="form-field">
+                <label for="ck-name">Full name</label>
+                <input id="ck-name" name="name" type="text" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="ck-phone">Phone</label>
+                <input id="ck-phone" name="phone" type="tel" required autocomplete="tel" pattern="[0-9+()\s-]{7,}">
+              </div>
+              <div class="form-field form-field--full">
+                <label for="ck-email">Email</label>
+                <input id="ck-email" name="email" type="email" required autocomplete="email">
+              </div>
+              <div class="form-field form-field--full">
+                <label for="ck-address">Delivery address</label>
+                <textarea id="ck-address" name="address" rows="3" required autocomplete="street-address"></textarea>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="ck-notes">Notes for the courier <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+                <textarea id="ck-notes" name="notes" rows="2"></textarea>
+              </div>
+              <div class="form-field form-field--full">
+                <button class="btn btn--block" type="submit">Place order &mdash; pay on delivery</button>
+                <p class="cart-note">You may open and inspect every piece before paying the courier.</p>
+              </div>
+            </form>
+            <div id="checkout-done" class="panel" style="background:var(--sand-200);margin-top:1.5rem" hidden></div>
+          </div>
+        </div>
+
+        <aside class="panel summary" data-cart-summary hidden>
+          <h2 class="panel__title">Order summary</h2>
+          <dl>
+            <div class="cart-total"><dt>Pieces</dt><dd data-sum-items>0</dd></div>
+            <div class="cart-total"><dt>Subtotal</dt><dd data-sum-sub>$0.00</dd></div>
+            <div class="cart-total"><dt>Delivery</dt><dd data-sum-ship>Free</dd></div>
+            <div class="cart-total cart-total--grand" style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line)">
+              <dt style="font-size:var(--step-0);color:var(--ink-900)">Total</dt><dd data-sum-total>$0.00</dd>
             </div>
-          </div>
-          <div class="split__media" data-reveal="right">
-            <img src="images/Royal%20Adornments.jpeg" alt="Gilded collar from the Royal Adornments collection" loading="lazy" decoding="async">
-          </div>
-        </div>
+          </dl>
+          <p class="cart-note">Transparent pricing &mdash; no taxes or service fees are added on delivery.</p>
+          <ul class="assurance" style="margin-top:0;border-top:0;padding-top:0">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Inspect before you pay</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Insured, tracked delivery</span></li>
+          </ul>
+        </aside>
       </div>
-    </section>
-
-    <section class="section section--dark">
-      <div class="shell shell--narrow">
-        <div class="section-head section-head--center">
-          <div data-reveal>
-            <p class="eyebrow">The road here</p>
-            <h2 class="section-title">How the bazaar was built</h2>
-          </div>
-        </div>
-        <div class="timeline" data-reveal-group>
-          <div class="timeline__item" data-reveal>
-            <p class="timeline__year">Chapter 01</p>
-            <h3 style="color:var(--gold-400)">The idea</h3>
-            <p style="color:rgba(244,238,226,.7)">Four friends, one shared obsession with museum halls and the objects that survive their makers. The name &quot;Aman&quot; comes from the first letters of our own.</p>
-          </div>
-          <div class="timeline__item" data-reveal>
-            <p class="timeline__year">Chapter 02</p>
-            <h3 style="color:var(--gold-400)">The workshops</h3>
-            <p style="color:rgba(244,238,226,.7)">We spent months finding small studios who still cast, paint and gild by hand, and agreed we would never list a piece we had not held ourselves.</p>
-          </div>
-          <div class="timeline__item" data-reveal>
-            <p class="timeline__year">Chapter 03</p>
-            <h3 style="color:var(--gold-400)">The bazaar opens</h3>
-            <p style="color:rgba(244,238,226,.7)">134 pieces across 7 collections, photographed and checked in-house, shipped anywhere in Egypt.</p>
-          </div>
-          <div class="timeline__item" data-reveal>
-            <p class="timeline__year">Chapter 04</p>
-            <h3 style="color:var(--gold-400)">What comes next</h3>
-            <p style="color:rgba(244,238,226,.7)">More civilisations, more crafts. Art has no borders, and neither should a bazaar.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="shell">
-        <div class="section-head section-head--center">
-          <div data-reveal>
-            <p class="eyebrow">What we promise</p>
-            <h2 class="section-title">Four things we will not compromise</h2>
-          </div>
-        </div>
-        <div class="value-grid" data-reveal-group>
-          <div class="value-card" data-reveal>
-            <span class="value-card__glyph" aria-hidden="true">&#x13080;</span>
-            <h3>Curated, not catalogued</h3>
-            <p>Every piece is chosen by hand. If it would not earn a place in our own homes, it does not reach the bazaar.</p>
-          </div>
-          <div class="value-card" data-reveal>
-            <span class="value-card__glyph" aria-hidden="true">&#x132F9;</span>
-            <h3>Made by artisans</h3>
-            <p>Cast, painted and finished in small workshops, so the detail holds up when you look closely.</p>
-          </div>
-          <div class="value-card" data-reveal>
-            <span class="value-card__glyph" aria-hidden="true">&#x13171;</span>
-            <h3>Inspect before you pay</h3>
-            <p>Open the parcel at your door. Pay the courier only once you are satisfied with what you see.</p>
-          </div>
-          <div class="value-card" data-reveal>
-            <span class="value-card__glyph" aria-hidden="true">&#x1320B;</span>
-            <h3>Packed like a loan piece</h3>
-            <p>Double-boxed with moulded protection and insured in transit, anywhere we ship.</p>
-          </div>
-        </div>
-        <p style="text-align:center;margin-top:3rem" data-reveal>
-          <a class="btn" href="categories.html">Explore the collections <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </p>
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">

@@ -1,292 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-base="../">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Adornment | Aman Bazaar</title>
-    <link rel="stylesheet" href="./itemstyle.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
-        rel="stylesheet">
-    <style>
-        /* Hero Section */
-        .category-hero {
-            background-image: url('../images/Royal\ Adornments.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-overlay {
-            background: linear-gradient(135deg,
-                    rgba(26, 34, 56, 0.7) 0%,
-                    rgba(62, 39, 35, 0.6) 100%);
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
-            padding: 2rem;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Royal Adornments | Aman Bazaar</title>
+  <meta name="description" content="Step into a world of luxury and heritage. This collection showcases accessories inspired by royal elegance, designed to reflect power, beauty, and sophisti">
+  <meta name="theme-color" content="#0a1020">
+  <meta property="og:site_name" content="Aman Bazaar">
+  <meta property="og:title" content="Royal Adornments | Aman Bazaar">
+  <meta property="og:description" content="Step into a world of luxury and heritage. This collection showcases accessories inspired by royal elegance, designed to reflect power, beauty, and sophisti">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../images/Royal%20Adornments.jpeg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a1020'/%3E%3Cg fill='none' stroke='%23c8a04f' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='16' cy='9.5' r='4.3'/%3E%3Cpath d='M16 14v12M10.5 18h11'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,400..700;1,400..700&family=Inter:wght@300..700&display=swap">
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Aman <span>Bazaar</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../categories.html" class="active">Categories</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark" aria-hidden="true">&#x13080;</span>
+        Aman <span>Bazaar</span>
+      </a>
 
-    <section class="category-hero">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <h1 class="category-title">Royal Adornment</h1>
-                <p class="category-description">
-                    Step into a world of luxury and heritage. This collection showcases accessories inspired by royal
-                    elegance, designed to reflect power, beauty, and sophistication.
-                </p>
-            </div>
-        </div>
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <a class="nav__link" href="../index.html">Home</a>
+        <a class="nav__link" href="../categories.html" aria-current="page">Collections</a>
+        <a class="nav__link" href="../story.html">Our Story</a>
+        <a class="nav__link" href="../all%20items/about.html">About</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" type="button" data-search-open aria-label="Search the collection"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+        <button class="icon-btn" type="button" data-cart-open aria-label="Open your collection">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" aria-hidden="true">0</span>
+        </button>
+        <button class="icon-btn nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__media" style="background-image:url('../images/Royal%20Adornments.jpeg')" data-parallax="0.1"></div>
+      <div class="page-hero__inner">
+        <p class="eyebrow" style="color:var(--gold-500)">Collection &middot; 12 pieces</p>
+        <h1 class="page-hero__title">Royal Adornments</h1>
+        <p class="page-hero__lede">Step into a world of luxury and heritage. This collection showcases accessories inspired by royal elegance, designed to reflect power, beauty, and sophistication.</p>
+      </div>
     </section>
 
-    <main class="products-section">
-        <div class="container">
-            <h2 class="section-title">The Sovereign Collection</h2>
+    <section class="section">
+      <div class="shell">
+        <nav aria-label="Breadcrumb" style="margin-bottom:2rem">
+          <ol class="crumbs">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../categories.html">Collections</a></li>
+            <li aria-current="page">Royal Adornments</li>
+          </ol>
+        </nav>
 
-            <div class="products-grid">
+        <div class="toolbar">
+          <label class="field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <span class="visually-hidden">Filter this collection</span>
+            <input type="search" placeholder="Filter royal adornments&hellip;" data-filter-search autocomplete="off">
+          </label>
+          <label class="field field--select">
+            <span class="visually-hidden">Sort by</span>
+            <select data-filter-sort>
+              <option value="default">Sort: Featured</option>
+              <option value="name">Name, A&ndash;Z</option>
+              <option value="price-asc">Price, low to high</option>
+              <option value="price-desc">Price, high to low</option>
+            </select>
+          </label>
+          <p class="toolbar__count" data-filter-count aria-live="polite"></p>
+        </div>
 
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac1.jpeg" alt="Eye of Horus Amulet"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Ankh Eternal Life Masterpiece (AI Art/Conceptual)</h3>
-                        <p class="product-description">A handcrafted 18k gold-plated pendant featuring the Eye of Horus,
-                            symbolizing protection and royal power.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$75.00</span>
-                            <a href="../product4/Ankh Eternal Life Masterpiece.html" class="cta-button">View Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac2.jpeg" alt="Nefertiti Silhouette Ring"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">The Diadem of Princess Sithathoriunet (Authentic Replica/Artifact)
-                        </h3>
-                        <p class="product-description">A polished silver ring featuring the iconic silhouette of
-                            Nefertiti, the Great Royal Wife.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$60.00</span>
-                            <a href="../product4/The Diadem of Princess Sithathoriunet (Authentic ReplicaArtifact).html" class="cta-button">View Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac3.jpeg" alt="Lapis Lazuli Scarab Bracelet"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Grand Statement "Goddess" Collar</h3>
-                        <p class="product-description">An intricate cuff bracelet featuring a central scarab carved from
-                            genuine Lapis Lazuli.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$85.00</span>
-                            <a href="../product4/Grand Statement .html" class="cta-button">View Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac4.jpeg" alt="Ankh of Life Earrings"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Tutankhamun Mask Scarab Collar</h3>
-                        <p class="product-description">Elegant drop earrings shaped as the Ankh, the ancient symbol of
-                            eternal vitality.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$100.00</span>
-                            <a href="../product4/Tutankhamun Mask Scarab Collar.html" class="cta-button">View
-                                Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac5.jpeg" alt="Gilded Falcon Brooch"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Lapis & Gold Net Collar</h3>
-                        <p class="product-description">A finely detailed falcon brooch with outstretched wings, inlaid
-                            with turquoise-colored enamel.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$70.00</span>
-                            <a href="../product4/Lapis & Gold Net Collar.html" class="cta-button">View Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac6.jpeg" alt="Papyrus Scroll Necklace"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Embossed Golden Torque with Turquoise</h3>
-                        <p class="product-description">A unique pendant designed like a rolled papyrus scroll, cast in
-                            aged bronze.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$75.00</span>
-                            <a href="../product4/Embossed Golden Torque with Turquoise.html" class="cta-button">View
-                                Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac7.jpeg" alt="Cleopatra Beaded Collar"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Winged Solar Disc Beaded Collar</h3>
-                        <p class="product-description">A modern interpretation of the Pharaonic broad collar, featuring
-                            vibrant ceramic beads.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$95.00</span>
-                            <a href="../product4/Winged Solar Disc Beaded Collar.html" class="cta-button">View
-                                Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac8.jpeg" alt="Golden Lotus Hairpin"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Golden Scarab & Lapis Lazuli Necklace</h3>
-                        <p class="product-description">A decorative hairpin inspired by the blue lotus of the Nile,
-                            finished in matte gold.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$77.00</span>
-                            <a href="../product4/Golden Scarab & Lapis Lazuli Necklace.html" class="cta-button">View
-                                Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac9.jpeg" alt="Tutankhamun Mask Charm"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Traditional Nubian/Upper Egyptian Bridal Set</h3>
-                        <p class="product-description">A miniature replica of the Boy King’s funerary mask, perfect for
-                            bracelets or chains.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$200.00</span>
-                            <a href="../product4/Traditional Nubian.html" class="cta-button">View Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac10.jpeg" alt="Uraeus Cobra Headband"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Turquoise Beaded Wesekh Collar</h3>
-                        <p class="product-description">A sleek headband featuring a rearing cobra, the symbol of
-                            sovereignty and divine authority.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$85.00</span>
-                            <a href="../product4/Turquoise Beaded Wesekh Collar.html" class="cta-button">View
-                                Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac11.jpeg" alt="Hieroglyphic Leather Belt"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Pharaoh’s Guardian Horus Necklace</h3>
-                        <p class="product-description">Fine leather belt with an embossed brass buckle displaying the
-                            cartouche of Ramses II.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$125.00</span>
-                            <a href="../product4/Pharaoh’s Guardian Horus Necklace.html" class="cta-button">View
-                                Details</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <div class="card-image-wrapper">
-                        <img src="../all items/Items/Royal Adornment/Ac12.jpeg" alt="Gilded Sun Disk Watch"
-                            class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="product-title">Sacred Scarab & Lotus Blossom Necklace</h3>
-                        <p class="product-description">A luxury watch featuring a sun-ray dial and a gold-plated bezel
-                            with sun disk motifs.</p>
-                        <div class="card-footer">
-                            <span class="product-price">$175.00</span>
-                            <a href="../product4/Sacred Scarab.html" class="cta-button">View Details</a>
-                        </div>
-                    </div>
-                </article>
-
+        <div class="product-grid" data-filter-grid data-reveal-group>
+          <article class="product-card" data-reveal data-product
+                   data-name="Ankh Eternal Life Masterpiece (AI Art/Conceptual)" data-price="75" data-search="ankh eternal life masterpiece (ai art/conceptual) royal adornments a highly detailed, ornate gold collar featuring a large, jewel-encrusted ankh pendant." style="--d:0">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac1.jpeg" alt="Ankh Eternal Life Masterpiece (AI Art/Conceptual)" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="ankh-eternal-life-masterpiece-ai-art-conceptual" data-add-open>Quick Add</button>
             </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Ankh%20Eternal%20Life%20Masterpiece.html">Ankh Eternal Life Masterpiece (AI Art/Conceptual)</a></h3>
+              <p class="product-card__desc">A highly detailed, ornate gold collar featuring a large, jewel-encrusted Ankh pendant.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$75.00</span>
+                <a class="product-card__link" href="../product4/Ankh%20Eternal%20Life%20Masterpiece.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Embossed Golden Torque with Turquoise" data-price="75" data-search="embossed golden torque with turquoise royal adornments a solid-style golden torque necklace with embossed geometric patterns and spiral motifs." style="--d:70">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac6.jpeg" alt="Embossed Golden Torque with Turquoise" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="embossed-golden-torque-with-turquoise" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Embossed%20Golden%20Torque%20with%20Turquoise.html">Embossed Golden Torque with Turquoise</a></h3>
+              <p class="product-card__desc">A solid-style golden torque necklace with embossed geometric patterns and spiral motifs.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$75.00</span>
+                <a class="product-card__link" href="../product4/Embossed%20Golden%20Torque%20with%20Turquoise.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Golden Scarab &amp; Lapis Lazuli Necklace" data-price="77" data-search="golden scarab &amp; lapis lazuli necklace royal adornments a classic egyptian revival piece featuring a prominent golden scarab beetle—the symbol of rebirth—surrounded by rich lapis lazuli stones and golden lotus bud…" style="--d:140">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac8.jpeg" alt="Golden Scarab &amp; Lapis Lazuli Necklace" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="golden-scarab-lapis-lazuli-necklace" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Golden%20Scarab%20&amp;%20Lapis%20Lazuli%20Necklace.html">Golden Scarab &amp; Lapis Lazuli Necklace</a></h3>
+              <p class="product-card__desc">A classic Egyptian revival piece featuring a prominent golden scarab beetle—the symbol of rebirth—surrounded by rich Lapis Lazuli stones and golden lotus bud…</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$77.00</span>
+                <a class="product-card__link" href="../product4/Golden%20Scarab%20&amp;%20Lapis%20Lazuli%20Necklace.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Grand Statement &quot;Goddess&quot; Collar" data-price="85" data-search="grand statement &quot;goddess&quot; collar royal adornments a high-fashion, multi-layered statement necklace blending bronze, gold, and turquoise tones." style="--d:210">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac3.jpeg" alt="Grand Statement &quot;Goddess&quot; Collar" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="grand-statement-goddess-collar" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Grand%20Statement%20Goddess%20Collar.html">Grand Statement &quot;Goddess&quot; Collar</a></h3>
+              <p class="product-card__desc">A high-fashion, multi-layered statement necklace blending bronze, gold, and turquoise tones.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$85.00</span>
+                <a class="product-card__link" href="../product4/Grand%20Statement%20Goddess%20Collar.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Lapis &amp; Gold Net Collar" data-price="70" data-search="lapis &amp; gold net collar royal adornments a delicate yet striking &quot;net&quot; style necklace (serekh) made with cobalt blue bugle beads and gold spacers." style="--d:0">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac5.jpeg" alt="Lapis &amp; Gold Net Collar" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="lapis-gold-net-collar" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Lapis%20&amp;%20Gold%20Net%20Collar.html">Lapis &amp; Gold Net Collar</a></h3>
+              <p class="product-card__desc">A delicate yet striking &quot;net&quot; style necklace (Serekh) made with cobalt blue bugle beads and gold spacers.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$70.00</span>
+                <a class="product-card__link" href="../product4/Lapis%20&amp;%20Gold%20Net%20Collar.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Pharaoh’s Guardian Horus Necklace" data-price="125" data-search="pharaoh’s guardian horus necklace royal adornments a stunning beaded collar featuring the falcon god horus at its center. this piece uses vibrant turquoise and deep gold beads, accented with carnelian-colored stones…" style="--d:70">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac11.jpeg" alt="Pharaoh’s Guardian Horus Necklace" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="pharaoh-s-guardian-horus-necklace" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Pharaoh%E2%80%99s%20Guardian%20Horus%20Necklace.html">Pharaoh’s Guardian Horus Necklace</a></h3>
+              <p class="product-card__desc">A stunning beaded collar featuring the falcon god Horus at its center. This piece uses vibrant turquoise and deep gold beads, accented with carnelian-colored stones…</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$125.00</span>
+                <a class="product-card__link" href="../product4/Pharaoh%E2%80%99s%20Guardian%20Horus%20Necklace.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Sacred Scarab &amp; Lotus Blossom Necklace" data-price="175" data-search="sacred scarab &amp; lotus blossom necklace royal adornments featuring the iconic scarab beetle surrounded by lotus flower motifs, this necklace is a tribute to rebirth and creation." style="--d:140">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac12.jpeg" alt="Sacred Scarab &amp; Lotus Blossom Necklace" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="sacred-scarab-lotus-blossom-necklace" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Sacred%20Scarab.html">Sacred Scarab &amp; Lotus Blossom Necklace</a></h3>
+              <p class="product-card__desc">Featuring the iconic scarab beetle surrounded by lotus flower motifs, this necklace is a tribute to rebirth and creation.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$175.00</span>
+                <a class="product-card__link" href="../product4/Sacred%20Scarab.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="The Diadem of Princess Sithathoriunet (Authentic Replica/Artifact)" data-price="60" data-search="the diadem of princess sithathoriunet (authentic replica/artifact) royal adornments an exquisite reproduction of the famous middle kingdom crown. it features a golden band adorned with carnelian rosettes, a central uraeus (cobra), and tall gold…" style="--d:210">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac2.jpeg" alt="The Diadem of Princess Sithathoriunet (Authentic Replica/Artifact)" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="the-diadem-of-princess-sithathoriunet-authentic-replica-artifact" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/The%20Diadem%20of%20Princess%20Sithathoriunet%20(Authentic%20ReplicaArtifact).html">The Diadem of Princess Sithathoriunet (Authentic Replica/Artifact)</a></h3>
+              <p class="product-card__desc">An exquisite reproduction of the famous Middle Kingdom crown. It features a golden band adorned with carnelian rosettes, a central uraeus (cobra), and tall gold…</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$60.00</span>
+                <a class="product-card__link" href="../product4/The%20Diadem%20of%20Princess%20Sithathoriunet%20(Authentic%20ReplicaArtifact).html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Traditional Nubian/Upper Egyptian Bridal Set" data-price="200" data-search="traditional nubian/upper egyptian bridal set royal adornments a magnificent multi-piece jewelry set including a tiered headpiece (kirdan style), elongated earrings, and layered necklaces." style="--d:0">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac9.jpeg" alt="Traditional Nubian/Upper Egyptian Bridal Set" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="traditional-nubian-upper-egyptian-bridal-set" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Traditional%20Nubian.html">Traditional Nubian/Upper Egyptian Bridal Set</a></h3>
+              <p class="product-card__desc">A magnificent multi-piece jewelry set including a tiered headpiece (Kirdan style), elongated earrings, and layered necklaces.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$200.00</span>
+                <a class="product-card__link" href="../product4/Traditional%20Nubian.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Turquoise Beaded Wesekh Collar" data-price="85" data-search="turquoise beaded wesekh collar royal adornments a handcrafted egyptian-style broad collar (wesekh) featuring intricate gold-tone seed beads and stunning turquoise teardrop focal points." style="--d:70">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac10.jpeg" alt="Turquoise Beaded Wesekh Collar" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="turquoise-beaded-wesekh-collar" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Turquoise%20Beaded%20Wesekh%20Collar.html">Turquoise Beaded Wesekh Collar</a></h3>
+              <p class="product-card__desc">A handcrafted Egyptian-style broad collar (Wesekh) featuring intricate gold-tone seed beads and stunning turquoise teardrop focal points.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$85.00</span>
+                <a class="product-card__link" href="../product4/Turquoise%20Beaded%20Wesekh%20Collar.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Tutankhamun Mask Scarab Collar" data-price="100" data-search="tutankhamun mask scarab collar royal adornments a vibrant beaded collar featuring a central golden centerpiece of king tutankhamun’s iconic mask, flanked by turquoise scarabs." style="--d:140">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac4.jpeg" alt="Tutankhamun Mask Scarab Collar" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="tutankhamun-mask-scarab-collar" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Tutankhamun%20Mask%20Scarab%20Collar.html">Tutankhamun Mask Scarab Collar</a></h3>
+              <p class="product-card__desc">A vibrant beaded collar featuring a central golden centerpiece of King Tutankhamun’s iconic mask, flanked by turquoise scarabs.</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$100.00</span>
+                <a class="product-card__link" href="../product4/Tutankhamun%20Mask%20Scarab%20Collar.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card" data-reveal data-product
+                   data-name="Winged Solar Disc Beaded Collar" data-price="95" data-search="winged solar disc beaded collar royal adornments a colorful hand-beaded masterpiece depicting the winged sun of thebes. it uses a rich palette of carnelian red, turquoise blue, and shimmering gold beads to create…" style="--d:210">
+            <div class="product-card__media">
+              <img src="../all%20items/Items/Royal%20Adornment/Ac7.jpeg" alt="Winged Solar Disc Beaded Collar" loading="lazy" decoding="async">
+              <span class="product-card__tag">Royal Adornments</span>
+              <button class="btn btn--sm btn--block product-card__quick" type="button"
+                      data-add="winged-solar-disc-beaded-collar" data-add-open>Quick Add</button>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Treasury of the Nile Series</p>
+              <h3 class="product-card__title"><a href="../product4/Winged%20Solar%20Disc%20Beaded%20Collar.html">Winged Solar Disc Beaded Collar</a></h3>
+              <p class="product-card__desc">A colorful hand-beaded masterpiece depicting the Winged Sun of Thebes. It uses a rich palette of carnelian red, turquoise blue, and shimmering gold beads to create…</p>
+              <div class="product-card__foot">
+                <span class="product-card__price">$95.00</span>
+                <a class="product-card__link" href="../product4/Winged%20Solar%20Disc%20Beaded%20Collar.html">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+          <p class="empty-state" data-filter-empty hidden>
+            <strong>No pieces match that search.</strong>
+            Try a shorter word, or <a class="text-link" href="../categories.html">browse another collection</a>.
+          </p>
         </div>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Aman Bazaar. All rights reserved. Preserving History, Illuminating the Future.</p>
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="../index.html">
+            <span class="brand__mark" aria-hidden="true">&#x13080;</span>
+            Aman <span>Bazaar</span>
+          </a>
+          <p>Preserving History, Illuminating the Future. A curated bazaar of heritage-inspired sculpture, adornment and decorative art.</p>
+          <div class="socials">
+            <a class="social" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.23 8.24c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42l-.47-.01c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.18 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg></a>
+            <a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+            <a class="social" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2a1 1 0 0 1 1-1Z"/></svg></a>
+          </div>
         </div>
-    </footer>
+        <div>
+          <h3>Collections</h3>
+          <div class="footer__links">
+            <a href="../all%20items/Item1.html">Sacred Candles</a>
+            <a href="../all%20items/item2.html">Bastet Relics</a>
+            <a href="../all%20items/item3.html">Statement Tables</a>
+            <a href="../all%20items/item4.html">Royal Adornments</a>
+          </div>
+        </div>
+        <div>
+          <h3>Discover</h3>
+          <div class="footer__links">
+            <a href="../categories.html">All Collections</a>
+            <a href="../story.html">Our Story</a>
+            <a href="../all%20items/about.html">About Us</a>
+            <a href="../cart.html">Your Collection</a>
+          </div>
+        </div>
+        <div>
+          <h3>Service</h3>
+          <div class="footer__links">
+            <a href="../index.html#faq">Delivery &amp; Returns</a>
+            <a href="../index.html#faq">Frequently Asked</a>
+            <a href="https://wa.me/" target="_blank" rel="noopener">Talk to a Curator</a>
+          </div>
+        </div>
+      </div>
 
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Aman Bazaar. Designed with <a href="https://alaa743.github.io/A-laa/" target="_blank" rel="noopener">A'laa Hany &gt;&lt;.</a></p>
+        <nav aria-label="Legal">
+          <a href="../index.html#faq">Privacy</a>
+          <a href="../index.html#faq">Terms</a>
+          <a href="../index.html#faq">Shipping</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+  <div class="search" id="search" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search__bar">
+      <label class="visually-hidden" for="search-input">Search the collection</label>
+      <input class="search__input" id="search-input" type="search" placeholder="Search the archives&hellip;" autocomplete="off">
+      <button class="icon-btn" type="button" data-search-close aria-label="Close search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="search__results"></div>
+  </div>
+
+  <div class="drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="drawer" id="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Your collection">
+    <div class="drawer__head">
+      <h2>Your Collection</h2>
+      <button class="drawer__close" type="button" data-cart-close aria-label="Close"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="drawer__body"></div>
+    <div class="drawer__foot" hidden>
+      <dl class="cart-total cart-total--grand">
+        <dt>Subtotal</dt>
+        <dd id="drawer-subtotal">$0.00</dd>
+      </dl>
+      <p class="cart-note">Shipping is calculated at checkout. Inspect before you pay the courier.</p>
+      <a class="btn btn--block" href="../cart.html">Review &amp; Checkout</a>
+    </div>
+  </aside>
+
+  <script src="../catalogue.js"></script>
+  <script src="../script.js"></script>
 </body>
 
 </html>
